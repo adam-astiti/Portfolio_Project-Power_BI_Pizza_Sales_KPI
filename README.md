@@ -1,5 +1,12 @@
 # 🍕 Interactive Pizza Sales Dashboard (Power BI)
 
+<table>
+  <tr>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/8c8f38fe-7747-40f1-9074-3959acb4fd11" alt="Home View"></td>
+    <td width="50%"><img src="https://github.com/user-attachments/assets/b0847f17-0c31-4d18-adbc-3c051bd1a067" alt="Pizza Detail View"></td>
+  </tr>
+</table>
+
 ## 📌 Project Overview
 
 This project features an interactive sales dashboard for a fictional pizza restaurant, analyzing a full year of sales data from 2015. For many restaurant owners, sales data is often recorded but rarely analyzed, leading to decisions based on gut-feel rather than concrete evidence. This Power BI dashboard solves that problem by transforming raw transaction data into a centralized, easy-to-understand tool that reveals key patterns and insights at a glance.
@@ -26,7 +33,21 @@ This project was developed end-to-end using **Microsoft Power BI**, showcasing s
 
 ### 1. Data Transformation and Modeling
 * **Data Source:** The project utilizes the [Pizza Sales Dataset from Kaggle](https://www.kaggle.com/datasets/nextmillionaire/pizza-sales-dataset).
-* **Data Normalization (Star Schema):** Recognizing that the initial flat-file dataset was denormalized and redundant, it was transformed into a proper **Star Schema**. This involved creating several Dimension Tables (`Dim_Pizza_Category`, `Dim_Date`) from the main data, leaving a clean Fact Table (`Fact_Sales`) at the center. This optimized model reduces redundancy and improves report performance.
+* **Data Normalization (Star Schema):** Recognizing that the initial flat-file dataset was denormalized and redundant, it was transformed into a proper **Star Schema**. This involved creating several Dimension Tables from the main data, `Dim_Pizza_Category` with power query and, `Dim_Date` with dax, leaving a clean Fact Table (`Fact_Sales`) at the center. This optimized model reduces redundancy and improves report performance.
+* 
+<table>
+  <tr>
+    <td width="50%">
+      <img src="https://github.com/user-attachments/assets/e5e21a10-31bc-448d-923c-f35301e08908" alt="Creating Pizza Category Dimension in Power Query">
+      <p align="center">Creating Dim_Pizza_Category in Power Query</p>
+    </td>
+    <td width="50%">
+      <img src="https://github.com/user-attachments/assets/a7e6f46d-2615-4d79-af7c-59ba016bef26" alt="Data Model Star Schema">
+      <p align="center">Data Model - Star Schema</p>
+    </td>
+  </tr>
+</table>
+
 
 ### 2. DAX (Data Analysis Expressions)
 All key performance indicators (KPIs) were written as custom measures using DAX. The primary measures include:
@@ -41,6 +62,8 @@ All key performance indicators (KPIs) were written as custom measures using DAX.
 ## 🎨 Report Design and Interactivity
 
 The report was designed with a focus on user experience, featuring a custom, on-brand theme and a high degree of interactivity.
+
+![power bi pizza sales](https://github.com/user-attachments/assets/9e23a591-e434-4283-8c86-cc2b0c63dd6d)
 
 * **Dynamic Views with Bookmarks:** **Bookmarks** and buttons are used to show and hide different sets of visuals, allowing the user to switch between a "Home" overview and a "Pizza Detail" view without leaving the page.
 * **Custom Theme:** A custom report theme was developed using a pizza-inspired color palette (yellows, reds, oranges) to create a visually appealing experience.
